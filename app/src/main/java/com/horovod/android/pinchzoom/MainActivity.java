@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         detector.onTouchEvent(event);
         return true;
     }
-    
+
 
     class ScaleListener extends ScaleGestureDetector.SimpleOnScaleGestureListener {
         @Override
