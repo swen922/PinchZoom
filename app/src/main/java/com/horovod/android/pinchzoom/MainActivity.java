@@ -19,32 +19,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         imageView = findViewById(R.id.img);
-        //detector = new ScaleGestureDetector(this, new ScaleListener());
-        detector = new ScaleGestureDetector(this, new ScaleGestureDetector.OnScaleGestureListener() {
-            @Override
-            public boolean onScale(ScaleGestureDetector detector) {
-                return true;
-            }
-
-            @Override
-            public boolean onScaleBegin(ScaleGestureDetector detector) {
-                return false;
-            }
-
-            @Override
-            public void onScaleEnd(ScaleGestureDetector detector) {
-
-            }
-        });
-
+        detector = new ScaleGestureDetector(this, new ScaleListener());
 
     }
+
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         detector.onTouchEvent(event);
         return true;
     }
+    
 
     class ScaleListener extends ScaleGestureDetector.SimpleOnScaleGestureListener {
         @Override
